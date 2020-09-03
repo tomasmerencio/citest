@@ -9,7 +9,7 @@ def index():
     if name and age:
         return f'{name} tiene {age} '
     else:
-        return "Hola que tal"
+        return "Hola que tal como estas"
 
 
 if __name__ == "__main__":
