@@ -9,7 +9,8 @@ before_install:
 - openssl aes-256-cbc -K $encrypted_db2095f63ba3_key -iv $encrypted_db2095f63ba3_iv
   -in deploy_rsa.enc -out deploy_rsa -d
 addons:
-  ssh_known_hosts: 35.237.192.199
+ ssh_known_hosts: 35.237.192.199
+
 before_deploy:
 - openssl aes-256-cbc -K $encrypted_db2095f63ba3_key -iv $encrypted_db2095f63ba3_iv
   -in deploy_rsa.enc -out deploy_rsa -d
@@ -19,6 +20,6 @@ before_deploy:
 deploy:
   provider: script
   skip_cleanup: true
-  script: ssh -t tomasmerencio@35.237.192.199 "cd Downloads/citest;git pull "
+  script: ssh -t tomasmerencio@35.237.192.199 "cd citest;git pull "
   on:
     branch: master
