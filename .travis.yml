@@ -20,6 +20,6 @@ before_deploy:
 deploy:
   provider: script
   skip_cleanup: true
-  script: ssh -t tomasmerencio@35.237.192.199 "cd citest;git pull "
+  script: ssh -t tomasmerencio@35.237.192.199 "cd /home/tomasmerencio/Downloads/citest;git pull "
   on:
     branch: master
